@@ -1,0 +1,39 @@
+:root {
+    --primary-color: #2ad4c3;
+    --secondary-color: #dbe2e9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn-theme {
+    background-color: var(--primary-color);
+}
+
+.btn-theme:hover {
+    background-color: #1a9e91 !important;
+    color: var(--secondary-color);
+}
+
+.text-theme {
+    color: var(--primary-color);
+}
+
+.bg-theme {
+    background-color: var(--primary-color);
+}
+
+body {
+    min-height: 100vh;
+}
+
+.hover-shadow {
+    transition: .5s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 0 1rem gray !important;
+}
