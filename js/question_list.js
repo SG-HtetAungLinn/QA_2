@@ -31,11 +31,6 @@ $(document).ready(function () {
                         });
                     }
                     const sortedQuestions = filteredQuestions.sort((a, b) => {
-                        const aHasAnswers = a.answers.length > 0;
-                        const bHasAnswers = b.answers.length > 0;
-                        if (aHasAnswers !== bHasAnswers) {
-                            return aHasAnswers ? 1 : -1;
-                        }
                         return b.votes.length - a.votes.length;
                     });
 

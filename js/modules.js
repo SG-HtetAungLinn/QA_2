@@ -8,7 +8,13 @@ $(document).ready(function () {
                 $('#module_list').html('')
                 let moduleHtml
                 if (response.result.length > 0) {
-                    response.result.forEach((item) => {
+                    let tutor = $('#tutor').val();
+                    let role = $('#role').val();
+                    let filterData = response.result
+                    if (role === 'staff') {
+                        filterData = filterData.filter(item => item.tutor === tutor)
+                    }
+                    filterData.forEach((item) => {
                         moduleHtml = `
                         <div class="col-md-4">
                             <a href="question_list.php?module=${item.code}" class="text-decoration-none">
