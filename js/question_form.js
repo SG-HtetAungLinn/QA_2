@@ -64,7 +64,7 @@ $(document).ready(function () {
         }
         if (!hasError) {
             $.ajax({
-                url: "app/save_question.php",
+                url: "save_question.php",
                 method: "POST",
                 data: formData,
                 dataType: "json",

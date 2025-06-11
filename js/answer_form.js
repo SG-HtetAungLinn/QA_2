@@ -42,7 +42,7 @@ $(document).ready(function () {
         }
         if (!hasError) {
             $.ajax({
-                url: "app/save_answer.php",
+                url: "save_answer.php",
                 method: "POST",
                 data: formData,
                 dataType: "json",

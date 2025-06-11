@@ -3,13 +3,13 @@ session_start();
 $authentication = false;
 if (isset($_SESSION['user'])) {
     $authentication = true;
-    if ($_SERVER['REQUEST_URI'] == '/QA_1/login.php') {
-        header("Refresh: 0; url=index.php");
+    if ($_SERVER['REQUEST_URI'] == '/QA_2/login.php') {
+        header("Refresh: 0; url=app/modules.php");
         exit();
     }
 }
 
 if (!$authentication) {
-    header("Refresh: 0; url=logout.php");
+    header("Refresh: 0; url=app/logout.php");
     exit();
 }
